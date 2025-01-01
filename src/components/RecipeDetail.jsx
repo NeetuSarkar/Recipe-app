@@ -78,7 +78,7 @@ const RecipeDetail = () => {
               <li key={step.number || index}>{step.step}</li> // Use step number or index if no unique id
             ))
           ) : (
-            <p>No instructions available</p>
+            <p>No instructions availables</p>
           )}
         </ul>
       </div>
