@@ -1,0 +1,96 @@
+/* General Navbar Styling */
+.navbar {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo on the left, links/burger on the right */
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align it at the top of the page */
+  width: 100%; /* Ensure it spans the entire width */
+  z-index: 1000; /* Keep it above other content */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(2, 170, 2);
+  cursor: pointer;
+}
+
+.logo span {
+  color: white;
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+/* Active Link Styling */
+.nav-links .active {
+  color: rgb(2, 170, 2); /* Highlight the active link */
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: rgb(208, 207, 207);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: rgb(2, 170, 2);
+}
+
+/* Burger Menu Styling */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger-menu .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+/* Responsive Styling for Small Screens */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    display: none; /* Hide the links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    gap: 1rem;
+    width: 200px;
+    height: 20vh;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links a {
+    color: black;
+    font-weight: bold;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show links when the menu is open */
+  }
+
+  .burger-menu {
+    display: flex; /* Show burger menu */
+  }
+}

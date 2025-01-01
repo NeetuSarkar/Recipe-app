@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.content {
+  padding: 0 20%;
+  padding-top: 70px;
+  /* background-color: rgb(170, 169, 167); */
+}
+
+@media (max-width: 856px) {
+  .content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

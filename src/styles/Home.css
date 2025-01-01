@@ -1,0 +1,166 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.home-container .about {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.home-container .about-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: start;
+  text-align: start;
+}
+
+.home-container .about-left p {
+  color: grey;
+}
+
+.home-container .about-left button,
+.details .detail-list button {
+  background-color: rgb(2, 170, 2);
+  padding: 8px 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.home-container .about-right {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 5px;
+}
+
+.home-container .about-right img {
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  display: block;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.details .details-img,
+.details .detail-list {
+  width: 50%;
+}
+
+.details .details-img img {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.details .detail-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: start;
+}
+
+.details .detail-list li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  border-left: 4px solid rgb(2, 170, 2);
+  padding-left: 4px;
+}
+
+.quote .quote-text {
+  text-align: justify;
+  font-size: 1.15rem;
+}
+
+.quote .quote-start {
+  color: rgb(2, 170, 2);
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-right: 4px;
+}
+
+.quote .author {
+  margin-top: 4px;
+  text-align: end;
+  color: grey;
+}
+
+.top-chefs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.top-chefs .chefs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.top-chefs img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Responsive Styling for Small Screens */
+
+@media (max-width: 1024px) {
+  .top-chefs .chefs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .home-container .about-right img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 456px) {
+  .home-container .about,
+  .home-container .details {
+    flex-direction: column;
+  }
+
+  .home-container .about-left,
+  .home-container .about-right,
+  .home-container .details-img,
+  .home-container .detail-list {
+    width: 100%;
+  }
+
+  .home-container .about-left,
+  .home-container .detail-list {
+    align-items: center;
+    text-align: center;
+  }
+  .home-container .detail-list li {
+    text-align: start;
+  }
+
+  .home-container .detail-list h1 {
+    font-size: 1.75rem;
+  }
+
+  .top-chefs {
+    align-items: center;
+  }
+
+  .top-chefs .chefs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,39 @@
+.chef {
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: inherit;
+  border-radius: 8px;
+}
+
+.chef-image {
+  height: 100px;
+  width: 100px;
+}
+
+.chef-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.chef .chef-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chef .chef-details h3 {
+  font-size: 1rem;
+}
+
+.chef .chef-details .chef-links {
+  display: flex;
+  justify-content: start;
+  gap: 0.25rem;
+}
+
+.chef .chef-details .chef-links img {
+  width: 20px;
+  height: 20px;
+}
